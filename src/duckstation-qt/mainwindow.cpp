@@ -775,6 +775,9 @@ void MainWindow::onGameListContextMenuRequested(const QPoint& point, const GameL
 
     connect(menu.addAction(tr("Set Cover Image...")), &QAction::triggered,
             [this, entry]() { onGameListSetCoverImageRequested(entry); });
+    
+    connect(menu.addAction(tr("Set Back Image...")), &QAction::triggered,
+            [this, entry]() { onGameListSetBackImageRequested(entry); });
 
     menu.addSeparator();
 
